@@ -66,7 +66,7 @@ export default {
           this.successScreen = true
         }
       } else {
-        // this.tries++
+        this.tries++
       }
     },
     makeGame() {
@@ -98,7 +98,7 @@ export default {
       }, 10)
 
     },
-    async generateWord() {      
+    async generateWord() {
       let res = await axios.get('https://random-word-api.herokuapp.com/word?number=1')
       this.word = res.data[0].toUpperCase()
       console.log(123);
